@@ -1,4 +1,4 @@
-#ifndef STRUCTURES_H //diretivas
+#ifndef STRUCTURES_H // diretivas
 #define STRUCTURES_H
 
 #include <stdio.h>
@@ -19,13 +19,19 @@ struct product *cadastro;
 
 typedef struct product Product;
 
-
 struct cart // Carrinho
 {
     int id_prod;
-    int qt_buy;
-    struct product *next, *prev;
+    char name[61];
+    float price_cart;
+    int stockid;
+    struct cart *next, *prev;
 };
-typedef struct cart Cart;   
+// printf("\n%d, %s, %.2f, %d\n", aux_c->id_prod,aux_c->name, aux_c->price_cart, aux_c->stockid);
+struct cart *head2 = NULL;
+struct cart *tail2 = NULL;
+struct cart *cart2;
+
+typedef struct cart Cart;
 
 #endif
